@@ -1,0 +1,1468 @@
+\documentclass{article}
+%sets paragraph indent for whole document
+\setlength{\parindent}{0pt}
+%gap between paragraphs
+\setlength{\parskip}{1em}
+%line spacing (1.3 is equivalent to one and a half spacing)
+\renewcommand{\baselinestretch}{1.3}
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+
+\author{Dr Simon P.~Young \thanks{MSc Student, LJMU, UK}}
+\title {Astrophysics Equations}
+
+
+\begin{document}
+% generate the title
+\maketitle
+
+
+\begin{abstract}
+This collection of formulae has been collated for use in the MSc Astrophysics end-of-chapter tests and examinations. The author takes no responsibilities for mistakes! Where possible, equations are checked for accuracy using more than one source. Some will be approximations, and this will be highlighted where practicable. 
+
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section{Mathematics}
+
+\textbf{Small-Angle Formulae (\text{in radians)}}
+\begin{equation}
+\sin(\theta) \approx \tan(\theta) = \theta
+\end{equation}
+\begin{equation}
+\cos(\theta) \approx 1 \approx 1 - \frac {\theta^2} {2}
+\end{equation}
+
+\textbf{Taylor Expansions}
+\begin{equation}
+e^x \approx 1 + x
+\end{equation}
+\begin{equation}
+\left(1 + x\right)^n \approx 1 + nx
+\end{equation}
+
+\textbf{Logarithms}
+\begin{equation}
+\log(a) + \log(b) = \log(a \times b)
+\end{equation}
+\begin{equation}
+\log(a) - \log(b) = \log(a/b)
+\end{equation}
+\begin{equation}
+a \log(b) = \log(b^a)
+\end{equation}
+
+\textbf {Gaussian}
+\begin{equation}
+A_o = \exp \left[ - \frac {1}{2} \left( \frac {x - \mu}{\sigma} \right)^2 \right]
+\end{equation}
+
+\textbf {Equations for an Ellipse}
+\vspace{5mm}
+\textit {Polar form - the numerator is the semi-latus rectum, \(l\) (Eq.\ref{semilatus_rectum})}
+\begin{equation}
+r = \frac {l} {1 + e \cos\left(\theta\right)}
+\end{equation}
+\textit {Semi-latus rectum, l:}
+\begin{equation} \label{semilatus_rectum}
+l = a \left(1-e^2\right) 
+\end{equation}
+\textit {Eccentricity, e:}
+\begin{equation}
+e = \sqrt {1 - \frac {b^2} {a^2}} 
+\end{equation}
+\textit {Area of an ellipse, \(A_\mathrm{e}\):}
+\begin{equation}
+A_\mathrm{e} = \pi a b 
+\end{equation}
+
+
+\newpage
+
+\section {General Physics}
+
+\textbf {Centripetal Force} 
+\begin{equation}\label{centripetal_force}
+F_\mathrm{c} = \frac {m v^2}{r} = \frac {m \dot{r}^2}{r} 
+\end{equation}
+
+\textbf {Gravitational Force} 
+\begin{equation} \label{gravitational_force}
+F_\mathrm{g} = \frac {G M m} {R^2} 
+\end{equation}
+
+\textbf {Orbital Speed}
+\textit{for circular motion, with period P}
+\begin{equation} \label{orbital_speed}
+v_\mathrm{circ} = \frac {2 \pi r}{P}
+\end{equation}
+ 
+\textbf {Escape Speed}
+\begin{equation}
+v_\mathrm{esc} = \sqrt \frac {2 G M} {R}
+\end{equation}
+
+\textbf {Flux - power per unit area}
+\begin{equation}
+F = \frac {L} {4 \pi d^2}
+\end{equation}
+
+\textbf {Stefan–Boltzmann Law}
+
+\begin{equation}
+L = 4 \pi R^2 \sigma_\mathrm{SB} T^4
+\end{equation}
+
+\begin{equation}
+T = \sqrt  \frac {L}{4 \pi R^2 \sigma}
+\end{equation}
+
+\begin{equation}
+R = \sqrt \frac {L}{4 \pi \sigma T^4}
+\end{equation}
+
+\textbf {Wien's Displacement Law for Black Bodies}
+\begin{equation}
+\lambda_\mathrm{max}/m = \frac {2.9 \times 10^{-3}}{T_\mathrm{eff}/K}
+\end{equation}
+
+\textbf {Planck's Law}
+\begin{equation}
+E = hf
+\end{equation}
+
+\textbf {Momentum}
+\begin{equation}
+p = \frac {hf}{c}
+\end{equation}
+
+\newpage
+
+\section {Planetary Science}
+
+\textbf {Circular Orbit}
+\begin{equation}
+P = \frac{2 \pi r}{v}
+\end{equation}
+\textbf {Kepler's First Law}
+\begin{equation}
+r = a \frac{1 - e^2}{1 + e \cos(\theta)}
+\end{equation}
+\textbf {Kepler's Second Law - \textit{the law of conservation of angular momentum}}
+\begin{equation}
+\frac{dA}{dt} = \frac{L}{2m}
+\end{equation}
+\begin{equation}
+\frac{d\vec{L}}{dt} = \vec{\tau} = \vec{0}
+\end{equation}
+\textbf {Kepler's Third Law}
+\begin{equation} \label{K3L_basic}
+P^2 = k a^3
+\end{equation}
+\begin{equation} \label{K3L_constant}
+k = \frac {4 \pi^2} {G M_\mathrm{TOT}} 
+\end{equation}
+\begin{equation}
+P = 2 \pi \sqrt{\frac{a^3}{G (M_\mathrm{*} + M_\mathrm{P})}}
+\end{equation}
+\text{In astronomical units (AU, \(M_\odot \) and years...)}
+\begin{equation}
+a^3 = M P^2
+\end{equation}
+\textbf {Newton's Law of Universal Gravitation}
+\begin{equation}
+F_\mathrm{grav} = \frac {GMm} {r^2}
+\end{equation}
+\textbf {Tidal Forces}
+\begin{equation}
+F_\mathrm{tidal} =  - \frac {2GMmR} {r^3}
+\end{equation}
+\textbf {Tidal Forces: Earth-Moon-Sun}
+\begin{equation}
+\frac{F_\mathrm{moon}}{F_\odot} = \frac{M_\mathrm{moon}}{M_\odot} \left( \frac{r_\odot}{r_\mathrm{moon}} \right)^3
+\end{equation}
+\textbf {Roche Limit  - minimum distance a moon can orbit}
+\begin{equation}
+R_\mathrm{Roche} < k \left( \frac {\rho_\mathrm{B}} {\rho_\mathrm{A}} \right)^{1/3} R_\mathrm{B}
+\end{equation}
+\begin{center}t
+\text{\(k \approx 1.3 - 2.5\)}
+\end{center}
+\begin{equation}
+R_\mathrm{Roche} = R_\mathrm{moon} \left( \frac{2 M_\mathrm{p}}{M_\mathrm{moon}} \right)^{1/3}
+\end{equation}
+\textbf {Hill Radius - maximum distance a moon can orbit}
+\begin{equation}
+R_\mathrm{H} = a_\mathrm{p} \left( \frac{M_\mathrm{p}}{3M_\mathrm{*}} \right)^{1/3}
+\end{equation}
+\textbf {Equilibrium Temperature of Planet}
+\textit {circular orbit and uniform temperature}
+\begin{equation}
+T_\mathrm{eq} = \left[ \frac {\left(1-A\right)L_\mathrm{*}} {16 \pi \; \sigma_\mathrm{SB} \; a_\mathrm{p}^2} \right]^{1/4} 
+\end{equation}
+\begin{equation}
+= T_\mathrm{*} \left(1-A\right)^{1/4} \left(\sqrt \frac {R_\mathrm{*}}{2a_\mathrm{p}} \right)
+\end{equation}
+\textbf {Gravitational Loss of Atmospheric Particles}
+\begin{equation}
+T_\mathrm{esc} > \frac {1}{54} \frac {G \; M_\mathrm{p} \; m}{k_\mathrm{B} \; R_\mathrm{p}}
+\end{equation}
+\textbf {Surface Gravity of a Planet}
+\begin{equation}
+g = \frac{G M_\mathrm{p}}{R^2_\mathrm{p}}
+\end{equation}
+\textbf {Atmospheric Pressure Profile}
+\begin{equation}
+P = P_\mathrm{0} \exp \left( -\frac{z}{H} \right)
+\end{equation}
+\text{\(z = \) height in atmosphere; \(H =\) scale height}
+\begin{equation}
+H = \frac{k_\mathrm{B}T}{g \mu u}
+\end{equation}
+\newpage
+
+\section {Exoplanet Detection Methods}
+\textbf{Direct Imaging}
+
+\textit{Angular Separation Between Planet/Star}
+
+\text{Using the small-angle formula; max when observer views face-on}
+\begin{equation}
+\alpha = \theta_\mathrm{max} = \frac{a_\mathrm{p}}{d_\mathrm{*}} \text{ rad}
+\end{equation}
+\text{Multiply rad to get arcsec by...}
+\begin{equation}
+\frac{360 \times 60 \times 60}{2 \pi} = \frac{648000}{\pi}
+\end{equation}
+\textit{Flux Ration of Planet/Star}
+\begin{equation}
+\frac{F_\mathrm{p}(\theta, \lambda)}{F_\mathrm{*}(\lambda)} = A_\mathrm{g}(\lambda) \left( \frac{R_\mathrm{p}}{a} \right)^2 \phi(\theta, \lambda)
+\end{equation}
+\text{Assuming the geometric albedo, \(A_\mathrm{g} = 2/3\) and phase function \(\phi(\theta, \lambda) = 1\)...} 
+\begin{equation}
+\frac{F_\mathrm{p}}{F_\mathrm{*}} \approx \frac{2}{3} \left( \frac{R_\mathrm{p}}{a} \right)^2
+\end{equation}
+\begin{equation}
+\frac{I_\mathrm{0, p}}{I_\mathrm{0, *}} \frac{F_\mathrm{p}}{F_\mathrm{*}} \geq \exp \left( \frac{-D^2 \alpha^2}{0.35 \lambda^2} \right)
+\end{equation}
+\textbf{Astrometry}
+\begin{equation}
+a_\mathrm{p} M_\mathrm{p} = a_\mathrm{*} M_\mathrm{*}
+\end{equation}
+\text{\(\alpha\) = astrometric wobble angle}
+\begin{equation}
+\alpha  = \frac{M_\mathrm{P}}{M_\mathrm{*}} \; \frac{a_\mathrm{p}}{d_\mathrm{*}} \mathrm{rad}
+\end{equation}
+\textbf{Microlensing Amplification}
+\begin{equation}
+A(u) = \frac{u^2 + 2}{u \sqrt{u^2 + 4}} \; \; \; \; u = \frac{\theta_\mathrm{LS}}{\theta_\mathrm{E}}
+\end{equation}
+\begin{equation}
+\theta_\mathrm{E} = \sqrt{\frac{4GM}{c^2} \frac{d_\mathrm{s} - d_\mathrm{L}}{d_\mathrm{s} d_\mathrm{L}}}
+\end{equation}
+\textbf {Radial Velocity}
+\begin{equation}
+a_\mathrm{p} M_\mathrm{p} = a_\mathrm{*} M_\mathrm{*}
+\end{equation}
+\begin{equation}
+K_\mathrm{*} = \frac {2 \pi a_\mathrm{p} \sin(i_\mathrm{p})} {P_\mathrm{p} \sqrt {1-e_\mathrm{p}^2}} \frac {M_\mathrm{p}} {M_\mathrm{p} + M_\mathrm{*}}
+\end{equation}
+\text{Assume \(M_\mathrm{p} + M_\mathrm{*} \approx M_\mathrm{*} \)}
+\begin{equation}
+K_\mathrm{*} = \frac {2 \pi \sin(i_\mathrm{p})} {P_\mathrm{p} \sqrt {1-e_\mathrm{p}^2}} \frac {M_\mathrm{p} \; a_\mathrm{p}} {M_\mathrm{*}}
+\end{equation}
+\begin{equation}
+K_\mathrm{*} = \left(\frac {2 \pi G}{P_\mathrm{p}}\right)^{1/3} M_\mathrm{*}^{-2/3} \left[ \frac {M_\mathrm{p} \sin(i_\mathrm{p})}{\sqrt{\left(1-e_\mathrm{p}^2\right)}} \right]
+\end{equation}
+\begin{equation}
+K_\mathrm{*} \approx 8.9 \text{ cm s}^{-1} \left( \frac{P}{\mathrm{yr}} \right)^{-1/3} \left( \frac{M_\mathrm{p} \sin(i_\mathrm{p})}{M_\mathrm{E} } \right) \left( \frac{M_\mathrm{*}}{M_\mathrm{\odot}} \right)^{-2/3}
+\end{equation}
+\begin{equation}
+M_\mathrm{p} \sin(i_\mathrm{p}) = K_\mathrm{*} \left( \frac {M_\mathrm{*}^2 P_\mathrm{p}} {2 \pi G} \right) ^{1/3}
+\end{equation}
+\begin{equation}
+M_\mathrm{p} \sin(i_\mathrm{p}) = \frac {K_\mathrm{*} M_\mathrm{*} P_\mathrm{p}} {2 \pi a_\mathrm{p}}
+\end{equation}
+\text{In astronomical units (AU, \(M_\odot \) and years...)}
+\begin{equation}
+M_\mathrm{p} \approx \sqrt{\frac{v^2 \; P^{2/3}_\mathrm{p} \; M^{4/3}_\mathrm{*}}{G}}
+\end{equation}
+\text{In SI units...}
+\begin{equation}
+M_\mathrm{p} \approx v \; \sqrt{\frac{P^{2/3}_\mathrm{p} \; M^{4/3}_\mathrm{*}}{4^{1/3} \; \pi^{2/3} \; G^{2/3}}}
+\end{equation}
+\textbf {Pulsar Timing - \(\tau = \) max amplitude of time delay}
+\begin{equation}
+\tau =  \sin(i_\mathrm{p}) \left( \frac {a_\mathrm{p}} {c} \right) \left( \frac {M_\mathrm{p}} {M_\mathrm{*}} \right)
+\end{equation}
+\textbf {Transit Method}
+\textit{Geometric Transit Probability (P) for viewing by distant observer}
+\begin{equation}
+p = \frac{R_\mathrm{p} + R_\mathrm{*}}{a_\mathrm{p}(1 - e^2_\mathrm{p})} \approx \frac{R_\mathrm{*}}{a_\mathrm{p}}
+\end{equation}
+\textit{Transit Depth}
+\begin{equation}
+\frac{\Delta F_\mathrm{*}}{F_\mathrm{*}} = \delta =  \left( \frac {R_\mathrm{p}} {R_\star} \right)^2 \; \; \; R_\mathrm{p} = R_\mathrm{*} \sqrt{\delta}
+\end{equation}
+\textit{Impact Parameter}
+\begin{equation}
+b = a_\mathrm{p} \cos(i_\mathrm{p})
+\end{equation}
+\textit{Transit Duration (from Haswell)}
+\begin{equation}
+T_\mathrm{dur}(b = 0.0) \approx \frac{P_\mathrm{p} \; R_\mathrm{*}}{\pi a_\mathrm{p}}
+\end{equation}
+\begin{equation}
+T_\mathrm{dur}(b = 0.0) =  \frac{P_\mathrm{p}}{\pi} \arcsin \left( \frac{R_\mathrm{*}}{a_\mathrm{p}} \right)
+\end{equation}
+\begin{equation}
+T_\mathrm{dur} =  \frac{P_\mathrm{p}}{\pi} \arcsin \left( \frac{\sqrt{(R_\mathrm{*}+R_\mathrm{p})^2 - a_\mathrm{p}^2 \cos^2 i_\mathrm{p}}}{a_\mathrm{p}} \right)^{1/2}
+\end{equation}
+\begin{equation}
+T_\mathrm{dur} \approx  \frac{P_\mathrm{p}}{\pi} \arcsin \left( \frac{R_\mathrm{*}^2}{a_\mathrm{p}^2} - \cos^2 i_\mathrm{p} \right)^{1/2}
+\end{equation}
+\begin{equation}
+T_\mathrm{dur} \approx  \frac{P_\mathrm{p}}{\pi} \left( \frac{R_\mathrm{*}^2}{a_\mathrm{p}^2} - \cos^2 i_\mathrm{p} \right)^{1/2}
+\end{equation}
+\textbf {Surface Gravity of an Exoplanet}
+\begin{equation}
+g = \frac{2 \pi}{P} \frac{(1-e^2)^{1/2} K_\mathrm{*}}{(R_\mathrm{p}/a_\mathrm{p})^2 \sin(i_\mathrm{p})}
+\end{equation}
+\newpage
+
+\section {Stars}
+\textbf {Parallax (\(\pi\))}
+\begin{equation}
+\frac{d}{\mathrm{pc}} = \frac{1}{\pi / \mathrm{arcsec}}
+\end{equation}
+
+
+\textbf {Magnitudes}
+
+\textit {Difference in Apparent Magnitudes}
+\begin{equation}
+m_\mathrm{1} - m_\mathrm{2} = -2.5 \log _{10} \frac {F_\mathrm{1}}{F_\mathrm{2}}
+\end{equation}
+
+\textit {Distance Modulus \(\left[ m - M \right]\)}
+\begin{equation}
+m - M = 5 \log _\mathrm{10} \left( \frac {d / pc} {10 / pc} \right)
+\end{equation}
+
+\begin{equation}
+d = 10^{(m-M+5)/5}
+\end{equation}
+
+\begin{equation}
+d = 10^{(m-M+5-A)/5} \mathrm{where \; A \; is \; an \; extinction \; magnitude}
+\end{equation}
+
+\textbf {Luminosities}
+\begin{equation}
+L(\lambda) = \frac {-dE(\lambda)}{dt}
+\end{equation}
+
+\begin{equation}
+L_\mathrm{Bol} = \int_{\lambda = 0}^{\infty} L(\lambda)\ d\lambda
+\end{equation}
+
+\begin{equation}
+L \propto M^\nu
+\end{equation}
+
+\begin{equation}
+\frac {L}{L_\odot} = \left(\frac {M}{M_\odot}\right)^\nu
+\end{equation}
+\begin{center}
+\text{\(\nu \approx 2.5 - 4.5\); for MS stars it is \(\approx 3.5\)}
+\end{center}
+
+\textit{Flux per unit surface area, of a black-body}
+\begin{equation}
+F = \sigma_\mathrm{B} T^4
+\end{equation}
+\text{therefore, total emission...}
+\begin{equation}
+L = 4 \pi R^2 \sigma_\mathrm{B} T^4_\mathrm{eff}
+\end{equation}
+
+\textit{Wien's Displacement Law for a black-body}
+\begin{equation}
+\lambda_\mathrm{max}/\mathrm{m} = \frac{2.9 \times 10^{-3}}{T_\mathrm{eff}/\mathrm{K}}
+\end{equation}
+
+\textbf {Time Scales}
+
+\textit {Free-fall or Dynamical Timescale}
+\begin{equation}
+\tau_\mathrm{ff} = \sqrt \frac {R^3}{G M}
+\end{equation}
+
+\textit {Gravitational, Kelvin-Helmholtz (Contraction) or Thermal Timescale}
+
+\text{Time taken to radiate away all gravitational energy}
+\begin{equation}
+\tau_\mathrm{grav} = \tau_\mathrm{KH} = \frac {E_\mathrm{grav}}{L} \approx \frac{3}{10} \frac{G M^2}{R L}
+\end{equation}
+
+\textit {Nuclear Timescale}
+\begin{equation}
+\tau_\mathrm{nuc} = 6 \times 10^{14} \; \; \text{J kg}^{-1} \; \; \frac {M}{L}
+\end{equation}
+
+
+\textit{Metallicity}
+\begin{equation}
+[\mathrm{Fe/H}] / \mathrm{dex} = \log_{10} \left( \frac{\mathrm{Fe}}{\mathrm{H}} \right)_* - \log_{10} \left( \frac{\mathrm{Fe}}{\mathrm{H}} \right)_\odot
+\end{equation}
+
+
+\textit{Surface Gravity of a Star}
+\begin{equation}
+g = \frac{G M_\mathrm{*}}{R^2_\mathrm{*}}
+\end{equation}
+
+\textbf {Equations of Stellar Structure}
+
+\textit {1/ Hydrostatic Equilibrium}
+\begin{equation}
+\frac {dP(r)}{dr} = - \frac {G m(r) \rho(r)}{r^2}
+\end{equation}
+
+
+\begin{equation}
+\frac {dP(r)}{dm(r)} = - \frac {G m(r)}{4 \pi r^4}
+\end{equation}
+
+\textit {2/ Mass Continuity}
+\begin{equation}
+\frac {dm(r)}{dr} = 4 \pi r^2 \rho(r)
+\end{equation}
+
+\begin{equation}
+M_\mathrm{TOT}(R) = \int_{M_\mathrm{0}}^{M_\mathrm{R}} 4 \pi r^2 \rho(r) \,dr
+\end{equation}
+
+\textit {3/ Thermal Equilibrium}
+\begin{equation}
+\frac {dL(r)}{dr} = 4 \pi r^2 \rho(r) \epsilon(r)
+\end{equation}
+\begin{center}
+\text{\(\epsilon\) very strongly depends on \(T\); \(\epsilon = 0\) everywhere except the core}
+\end{center}
+
+\textit {4a/ Temperature Structure, or Energy Transport or Transfer - Radiative}
+\begin{equation}
+\frac {dT(r)}{dr} = - \frac {3 L(r) \kappa(r) \rho(r)}{16 \pi r^2 a c \left[T(r)\right]^3}
+\end{equation}
+
+\begin{equation}
+ = - \frac {3}{4ac} \frac {\kappa \rho}{T^3} \frac {L_\mathrm{rad}}{4 \pi r^2}
+\end{equation}
+
+\begin{equation}
+4ac = 16 \sigma_\mathrm{SB}
+\end{equation}
+
+\textit {4b/i/ Temperature Structure, or Energy Transport or Transfer - Convective}
+\begin{equation}
+L_\mathrm{c} = 4 \pi r^2 c_\mathrm{P} T \alpha^2 \left(\frac{P}{\rho}\right)^{1/2} \left[\left| \frac {d\ln(T)}{d\ln(P)} \right |_\mathrm{star} - \left| \frac {d\ln(T)}{d\ln(P)} \right |_\mathrm{ad}  \right]^{3/2}
+\end{equation}
+
+\textit {4b/ii/ Temperature Structure, or Energy Transport or Transfer - Convective}
+
+\text{For adiabatic convection, with a fully ionised monoatomic gas (\(\gamma = c_p/c_v  = 5/3)\)}
+
+\begin{equation}
+\frac{dT}{dr} = - \left( 1 - \frac{1}{\gamma} \right) \frac{\mu m_\mathrm{H}}{k} \frac{G M}{r^2} = \frac{T}{P} \left( 1 - \frac{1}{\gamma} \right) \frac{dP}{dr}
+\end{equation}
+
+\textit {4c Temperature Structure, or Energy Transport or Transfer - Conductive}
+
+\text{For example, in white dwarfs; \(k\) is thermal conductivity}
+
+\begin{equation}
+\frac{dT(r)}{dr} = - \frac{1}{k} \frac{L(r)}{4 \pi r^2}
+\end{equation}
+
+
+
+\textit{Ideal gas law}
+\begin{equation}
+\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2} \text{ and } P \propto \rho T
+\end{equation}
+
+\textit {Schwartzschild Criterion for Convection}
+\begin{equation}
+\left| \frac {d\ln(T)}{d\ln(P)} \right |_\mathrm{star} > \frac {\gamma -1}{\gamma} + \frac {d\ln(\mu)}{d\ln(P)}
+\end{equation}
+
+
+\text{\(\mu\) depends on ionisation fraction and chemical composition; if neither change, this simplifies to...}
+
+
+\textit{Simplified Schwartzschild Criterion for Convection}
+\begin{equation}
+\left| \frac {d\ln(T)}{d\ln(P)} \right |_\mathrm{star} > \frac {\gamma -1}{\gamma}
+\end{equation}
+
+\textbf {Central and Other Estimates for Stars}
+
+\textit{Pressure}
+\begin{equation}
+P(0) \approx \frac{2 G M^2}{\pi R^4} \approx 10^{14} \left( \frac{M}{M_\odot} \right)^2  \left( \frac{R}{R_\odot} \right)^{-4} \mathrm{N m}^{-2}
+\end{equation}
+
+\textit{Temperature}
+\begin{equation}
+T(0) \approx 10^7 \left( \frac{M}{M_\odot} \right)  \left( \frac{R}{R_\odot} \right)^{-1} \mathrm{K}
+\end{equation}
+
+\textit{Mass to Energy Conversion}
+\begin{equation}
+\frac{dE}{dt} =  4 \times 10^{9}  \left( \frac{L}{L_\odot} \right) \; \mathrm{kg \; s}^{-1}
+\end{equation}
+
+
+
+\textbf{Mean Molecular Mass, \(\mu\)}
+\begin{equation}
+\frac{1}{\mu} = \text{ no. of particles per nucleon}
+\end{equation}
+\text{For a fully ionised mixture, which can be assumed inside a star:}
+\begin{equation}
+\frac{1}{\mu} \approx 2X + \frac{3}{4}Y +  \frac{1}{2}Y
+\end{equation}
+\begin{center}
+\text{X, Y and Z are mass fractions of H, He and metals; X + Y + Z = 1}
+\end{center}
+
+
+
+\textbf {Equations of State}
+
+
+\textit {Ideal Gas Equation}
+\begin{equation}
+P(r)_\mathrm{g} = \frac {\rho(r) k_\mathrm{B} T(r)}{\mu m_\mathrm{H}} \propto \rho T
+\end{equation}
+
+\textit {Radiation Pressure}
+\begin{equation}
+P(r)_\mathrm{r} = \frac {1}{3} a T^4(r) = \frac {1}{3} u
+\end{equation}
+
+\textit{Total Pressure}
+\begin{equation}
+P_\mathrm{tot} = P_\mathrm{g} + P_\mathrm{r}
+\end{equation}
+
+\textit {Non-Relativistic Degenerate Electron Gas: \(v<<c, v = p/m\)}
+\begin{equation}
+P_\mathrm{e} = K_\mathrm{nr} \rho^{5/3}
+\end{equation}
+
+\textit {Relativistic Degenerate Electron Gas: \(v \approx c\) }
+\begin{equation}
+P_\mathrm{e} = K_\mathrm{r} \rho^{4/3}
+\end{equation}
+
+\textit {Polytropic Equations of States}
+\begin{equation}
+P = K \rho^{1+\frac{1}{n}}
+\end{equation}
+\text{K is a constant}
+
+
+
+\textbf {Energy Generation Rate (per unit mass)}
+\begin{equation}
+\epsilon(r)_\mathrm{PP} = \epsilon_1 X^2_\mathrm{H} \rho(r) T^4(r) 
+\end{equation}
+
+\begin{equation}
+\epsilon(r)_\mathrm{CNO} = \epsilon_\mathrm{2} X_\mathrm{H} X_\mathrm{C} \rho(r) T^{16-17}(r)
+\end{equation}
+
+\textbf {Opacities}
+
+\textit {Low Temperature - \(H^-\)}
+\begin{equation}
+\kappa = \kappa_\mathrm{1} \rho^{0.5} T^4
+\end{equation}
+\textit {Intermediate Temperature - b-f and f-f - 'Kramer's Law'}
+\begin{equation}
+\kappa = \kappa_\mathrm{2} \rho T^{-3.5}
+\end{equation}
+\textit {High Temperature - Electron 'Thomson' Scattering}
+\begin{equation}
+\kappa = \kappa_\mathrm{3} (const.)
+\end{equation}
+
+\textbf {Lane-Emden Equation (LEE)}
+\begin{equation}
+\frac{1}{\xi} \frac{d}{d\xi} \left( \xi^2 \frac{d\Theta}{d\xi} \right) = -\Theta^n
+\end{equation}
+
+\begin{equation}
+R \propto M^\frac{n-1}{n-3}
+\end{equation}
+
+\textbf {Eddington Models}
+\begin{equation}
+P_\mathrm{tot} = P_\mathrm{r} + P_\mathrm{g}
+\end{equation}
+\begin{equation}
+P_\mathrm{g} = \beta P_\mathrm{tot} \text{ and } P_\mathrm{r} = (1 - \beta) P_\mathrm{tot}
+\end{equation}
+\begin{equation}
+P_\mathrm{g} = \frac{\beta}{1 - \beta} P_\mathrm{r}
+\end{equation}
+
+\textit{Eddington Quartic}
+\begin{equation}
+\frac{1 - \beta}{\beta^4} \propto M^2 \mu^4
+\end{equation}
+\text{Increasing \(M\) or \(\mu\) causes \(\beta\) to decrease, and makes radiation pressure more important}
+
+\textit{Eddington Limit}
+\begin{equation}
+L_\mathrm{Edd} = \frac{4 \pi c G M}{\kappa}
+\end{equation}
+\text{Radiation pressure overcomes gravity; \(M > 80 M_\odot\) have luminosities close to \(L_\mathrm{Edd}\)}
+
+\textbf {Homology Approximations}
+
+\textit{Main Sequence Stellar Lifetime - use \( L \propto M^3 \)}
+\begin{equation}
+\tau_\mathrm{MS} \propto \frac{\text{total energy available}}{\text{rate of energy release}} \propto \frac{M}{L} \propto  \frac{M}{M^3} \propto M^{-2}
+\end{equation}
+\text{Calibrate for \( 1 M_\odot \), where \(\tau_\mathrm{MS} \approx 1 \times 10^{10} \) years}
+
+
+\textbf {Equation of Radiative Transfer in a Stellar Atmosphere}
+
+\textit{Differential Equation}
+\begin{equation}
+\mu \frac{dI_\nu}{d\tau_\nu} = I_\nu (\mu, \tau_\nu) - S_\nu (\tau_\nu)
+\end{equation}
+
+\textit{Solution to the RTE}
+\begin{equation}
+I_\nu(\tau_{1, \nu}) = I(\tau_{2, \nu}) \exp \left( \frac{-(\tau_{2, \nu} - \tau_{1, \nu})}{\mu} \right) + \int_{\tau_{1, \nu}}^{\tau_{2, \nu}} \frac{S_\nu}{\mu} \exp \left( \frac{-(\tau_{2, \nu} - \tau_{1, \nu})}{\mu} \right)  \,d\tau_\nu
+\end{equation}
+
+\textit{Simplified RTE (assume all rays radial, source function independent of depth, \(\tau_1 = 0\))}
+\begin{equation}
+I_\nu(0) = I_\nu (\tau_\nu) e^{-\tau_\nu} + S_\nu (1 - e^ {-\tau_\nu})
+\end{equation}
+
+
+\textbf {Local Thermodynamic Equilibrium}
+
+\text{holds when temperature gradients are shallow, and density is higher}
+
+\begin{equation}
+S_\nu = B_\nu(T) = \frac{2 h \nu^2}{c^2} \left[ \exp \left( \frac{h \nu}{kT}  \right) -1 \right]^{-1}
+\end{equation}
+
+\text{source function approximates the Planck function for a BB, and when optically thick \(I_\nu \approx S_\nu \)}
+
+
+
+
+
+
+
+
+\newpage
+
+\section {Galaxies}
+\textbf {Magnitudes}
+
+\textit {Difference in Apparent Magnitudes}
+\begin{equation}
+m_\mathrm{1} - m_\mathrm{2} = -2.5 \log _\mathrm{10} \frac {F_\mathrm{1}}{F_\mathrm{2}}
+\end{equation}
+
+\textit {Distance Modulus, \(m - M\)}
+\begin{equation}
+m - M = 5 \log _\mathrm{10} \left( \frac {d / pc} {10 / pc} \right)
+\end{equation}
+
+\begin{equation}
+d = 10^ \frac {m-M}{5} \times 10 = 10^ {\left( {\frac {m-M}{5} + 1} \right)} = 10^{(m-M+5)/5}
+\end{equation}
+
+\textit {Meeus, 1998 Equation for Summing Multiple Star Magnitudes}
+\begin{equation}
+-2.5 \log _{10} \sum_{i = 1}^{n} 10^{-0.4 m_\mathrm{i}}
+\end{equation}
+
+\textbf {Speed of An Object Around Another - from K3L (Eq.\ref{K3L_basic}) and (Eq.\ref{K3L_constant}), and Orbital Speed (Eq.\ref{orbital_speed})}
+\begin{equation}
+v = \sqrt {\frac {GM} {R}}
+\end{equation}
+
+
+\textbf {Sizes of Galaxies}
+
+\textit{Rayleigh Criterion for the Resolution of a Diffraction Limited Optical System}
+
+\text{\(\lambda = \) observing wavelength of telescope; \(D = \) aperture diameter}
+\begin{equation}
+\theta_\mathrm{Rayleigh} / \mathrm{rad} = 1.22 \frac{\lambda}{D}
+\end{equation}
+
+\textit{1-D Angle Subtended Far Away, e.g. Galaxy - calculator set to radians}
+\begin{equation}
+\theta/\mathrm{rad} = \arctan \frac {Radius} {Distance}
+\end{equation}
+
+\textit {2-D Solid Angle (in steradians)}
+\begin{equation}
+\Omega/sr = \frac {A} {d^2} = \frac {\pi R^2} {d^2}
+\end{equation}
+
+\textbf {Conversions}
+
+\textit {Converting from Square Degrees to Square Arcminutes, or Square Arcminutes to Square Arcseconds - i.e. add 8.9 mags for each conversion}
+\begin{equation}
+-2.5 \log _\mathrm{10} \left( \frac {1}{3600} \right) = 8.9
+\end{equation}
+
+\textit{Convert Radians to Degrees, Arcmins, and Arcsecs. - calculator set to DEGREES. So if have a result in radians, multiply this result by \((180 \times 60 \times 60) / \pi\) to get arcsecs}
+\begin{equation}
+\theta/rad = \theta / \frac{180 \left[\times 60\right] \left[\times 60\right]} {\pi} deg \left[arcmin\right] \left[arcsec\right]
+\end{equation}
+
+\textit {Angle subtended... (small angle formula); calculator in RADIANS!}
+\begin{equation}
+\theta = \arctan\left(\frac {\mathrm{width}}{\mathrm{distance}} \right)
+\end{equation}
+
+
+\textit {Convert Steradians to Square Degrees, Square Arcmins and Square Arcsecs}
+\begin{equation}
+\Omega/sr = \theta^2 / \left( \frac{180 \left[\times 60\right] \left[\times 60\right]}{\pi} \right)^2 sq.deg \left[sq.arcmin\right] \left[sq.arcsec\right]
+\end{equation}
+
+\textit {Converting to Square Arcminutes and Square Arcseconds}
+\begin{equation}
+1 \: sq.deg = 60^2 \: sq.arcmin
+\end{equation}
+
+\begin{equation}
+1 \: sq.arcmin = 60^2 \: sq.arcsec
+\end{equation}
+
+\textbf {Virial Theorem}
+
+\textit {Combine centripetal (Eq.\ref{centripetal_force}) and gravitational force (Eq.\ref{gravitational_force}) equations}
+\begin{equation}
+v \sim \sqrt {\frac{GM}{R}}
+\end{equation}
+
+\textit {Total Energy}
+\begin{equation}
+E = U + K
+\end{equation}
+
+\textit {Equilibrium}
+\begin{equation}
+2 <K> + <U> = 0
+\end{equation}
+
+\begin{equation}
+<K> = -\frac {1}{2} <U>
+\end{equation}
+
+\begin{equation}
+<E> = - <K> = <U> / 2
+\end{equation}
+
+\textit {Energy Dissipation, e.g. through gaseous medium; Total Energy is Lost}
+\begin{equation}
+\Delta \left(K + U\right) < 0
+\end{equation}
+
+\begin{equation}
+U = \frac {-GMm}{R}
+\end{equation}
+
+\textit {Merging, e.g. galaxies - \(K_{star} = kinetic energy per star\)}
+\begin{equation}
+K_\mathrm{star} \propto \frac {G M_\mathrm{gal}}{R_\mathrm{e}}
+\end{equation}
+
+
+\textbf {Galaxy (projected, not full 3D) Surface Brigthness/Luminosity Profiles, as a function of distance from centre}
+
+\textit {Elliptical Galaxies and Spiral Bulges - the 'de Vaucoulers profile' or the 'R 1/4' law}
+\begin{equation}
+\log_\mathrm{10} \left[ \frac {I(R)}{I_\mathrm{e}} \right] = - 3.3307 \left[ \left( \frac {R}{R_\mathrm{e}} \right)^{(1/4)} - 1 \right]
+\end{equation}
+\begin{equation}
+\ln \left[ \frac {I(R)}{I_\mathrm{e}} \right] = - 7.67 \left[ \left( \frac {R}{R_\mathrm{e}} \right)^{(1/4)} - 1 \right]
+\end{equation}
+\begin{equation}
+I(R) = I_0 \exp\left(-7.6 \left[\frac {R}{R_\mathrm{e}} \right]^ \frac {1}{4} -1 \right)
+\end{equation}
+\textit {Elliptical Galaxies and Spiral Bulges - the Sersic Profile (n = 2 - 6; becomes de Vaucoulers when n = 4)}
+\begin{equation}
+I(R) = I_0 \exp\left(-\beta \left[\frac {R}{R_\mathrm{e}} \right]^ \frac {1}{n}\right)
+\end{equation}
+
+\textit {Spiral Galaxies (disc) - an exponential law (n = 1)}
+\begin{equation}
+\ln \left[ \frac {I(R)}{I_\mathrm{0}} \right] = - \alpha R
+\end{equation}
+\begin{equation}
+I(R) = I_0 \exp\left(-\beta \left[\frac {R}{R_\mathrm{e}} \right]\right)
+\end{equation}
+
+\textit {General Form - de Vaucoulers' and exponential profiles are special cases; \(n = 0.5 - 10\); \(n = 1\) case is the exponential form; as an approximation  \(b_n = 1.9992n - 0.3271\)}
+\begin{equation}
+\ln \left[ \frac {I(R)}{I_\mathrm{e}} \right] = - b_\mathrm{n} \left[ \left( \frac {R}{R_\mathrm{e}} \right)^{(1/n)} - 1 \right]
+\end{equation}
+\begin{equation}
+I(R) = I_\mathrm{e} \exp \left(- b_\mathrm{n} \left[ \frac{R}{R_\mathrm{e}} \right] - 1 \right)
+\end{equation}
+
+\textbf {Stellar Initial Mass Function - IMF (\textit {a power law}); \(x = 1.35\) is a 'Salpeter IMF'}
+\begin{equation}
+\phi (M) = \frac {dN}{dM} = K M^{-(1+x)}
+\end{equation}
+
+\textit {Total Number of Stars, e.g. for x = 1.5, i.e. \(KM^{-2.5}\)}
+\begin{equation}
+N =  \int_{M_L}^{M_U} \phi(M) \,dM
+= K \int_{M_L}^{M_U} M^{-2.5} \,dM 
+= K \left[ \frac{M^{-1.5}}{-1.5} \right]^{M^U}_{M^L}
+= \frac{K}{1.5} \left[M^{-1.5}_L - M^{-1.5}_U \right]
+\end{equation}
+
+\textit {Total Mass of Stars, e.g. for x = 1.5, i.e. \(KM^{-2.5}\)}
+\begin{equation}
+M_\mathrm{tot} =  \int_{M_\mathrm{L}}^{M_\mathrm{U}} M \phi(M) \,dM =  K \int_{M_\mathrm{L}}^{M_\mathrm{U}} M^{-1.5} \phi(M) \,dM
+\end{equation}
+\begin{equation}
+=  -2K \left[M^{-0.5}\right]^{M_\mathrm{U}}_{M_\mathrm{L}} = -2K \left( \frac {1}{M^{0.5}_\mathrm{U}} - \frac {1}{M^{0.5}_\mathrm{L}}\right) = 2K \left( \frac {1}{M^{0.5}_\mathrm{L}} - \frac {1}{M^{0.5}_\mathrm{U}}\right)
+\end{equation}
+
+
+\textbf {Stellar Mass-Luminosity Relation; example \(\alpha = 3.5\)}
+\begin{equation}
+L (M) = C M^\alpha
+\end{equation}
+
+\textit {Total Luminosity of Stars, for e.g. \(CM^{3.5}\)}
+\begin{equation}
+L_\mathrm{tot} =  \int_{M_\mathrm{L}}^{M_\mathrm{U}} L(M) \phi(M) \,dM =  CK \int_{M_\mathrm{L}}^{M_\mathrm{U}} M^{3.5} M^{-2.5} \phi(M) \,dM 
+\end{equation}
+\begin{equation}
+=  CK \int_{M_\mathrm{L}}^{M_\mathrm{U}} M \phi(M) \,dM
+\end{equation}
+\begin{equation}
+= 0.5 \; CK \left( M^2_\mathrm{U} - M^2_\mathrm{L} \right) =  const \left[ M^2 \right] ^{M_\mathrm{U}}_{M_\mathrm{L}}
+\end{equation}
+
+\textbf {Surface Brightness (\textit{I for irradiance}) of a Galaxy - luminosity over area}
+\begin{equation}
+I = \frac{L}{\pi R^2}
+\end{equation}
+
+\begin{equation}
+\frac{\mu_\mathrm{B}}{\mathrm{mags \; arcsec}^{-2}} = -2.5 \log_\mathrm{10} \left(\frac{I_\mathrm{B}}{L_\odot \mathrm{pc}^{-2}} \right) + M_{\odot, B}
+\end{equation}
+
+\textbf {Inclination of a Spiral Galaxy}
+\begin{equation}
+\cos(i) = \frac {b}{a}
+\end{equation}
+
+\textbf {Distance Measurements}
+
+\textit{Trigonometric Parallax}
+
+\begin{equation}
+d = \frac {1}{\theta} \; \mathrm{pc}
+\end{equation}
+
+\textit{Period-Luminosity Relations}
+\begin{equation}
+Cepheids
+\end{equation}
+
+\textit {Tully-Fisher (Luminosity-Linewidth) Relation for Spirals (\(\alpha \sim 3\))}
+\begin{equation}
+L \propto v_\mathrm{rot}^\alpha
+\end{equation}
+\begin{equation}
+L_\mathrm{corr} = \sin(i) L_\mathrm{obs} + C_\mathrm{int} \log \left(\frac{a}{b}\right)
+\end{equation}
+
+\textit{Example Tully-Fisher Equations - different for different Spiral Galaxy types, and different passbands}
+\begin{equation}
+M_\mathrm{B} = -8 \log_\mathrm{10}(V_\mathrm{max}) + const
+\end{equation}
+\begin{equation}
+M_\mathrm{K} = -10 \log_\mathrm{10}(W_\mathrm{21cm}) + const
+\end{equation}
+
+\textit {Faber-Jackson Relation for Ellipticals (\(\alpha \sim 3-5\))}
+\begin{equation}
+L_e \propto \sigma^\alpha_\mathrm{0}
+\end{equation}
+\begin{equation}
+M_\mathrm{B} = - 10 \log_\mathrm{10}(\sigma_\mathrm{0}) + const
+\end{equation}
+
+\textit {Fundamental Plane for Ellipticals}
+\begin{equation} \label{FP}
+\log_\mathrm{10}(R_e) = 1.4 \log_\mathrm{10}(\sigma_\mathrm{0}) + 0.36 \left<\mu_\mathrm{B}\right>_\mathrm{e} + const
+\end{equation}
+\begin{equation} 
+L \propto \sigma^{2.65} R_\mathrm{e}^{0.65}
+\end{equation}
+
+\textit{Another FP relation - Luminous diameter' / ('\(D_\mathrm{n}-\sigma_\mathrm{o}\))' - Dressler et al., 1987; a standard ruler}
+
+\text{In general, for an elliptical surface brightness profile...}
+\begin{equation} \label{Dn}
+\log_\mathrm{10}(D_\mathrm{n}) = \log_\mathrm{10}(R_e) - 0.4\mu_\mathrm{e}
+\end{equation}
+
+\text{Combine equation (Eq.\ref{Dn}) with that of the FP above (Eq.\ref{FP}) to eliminate \(R_e\)}
+
+\begin{equation}
+D_\mathrm{n}/ \mathrm{kpc} = 2.05 \left(\frac{\sigma}{100 \; \mathrm{km \; s^{-1}}}\right)^\gamma
+\end{equation}
+\begin{center}
+\text{  (\(\gamma\sim 1.33\))}
+\end{center}
+
+\begin{equation}
+\sigma (\mathrm{km s}^{-1}) = 100 \left( \frac{D_\mathrm{n} / \mathrm{kpc}}{2.05} \right)^{0.75}
+\end{equation}
+
+\text{\(D_\mathrm{n}\) is the directly measured diameter within which the mean surface brightness is 20.75 B mag}
+\text{giving a value of \(D_\mathrm{n}\) (in arcsec); velocity dispersion then gives a value for \(D_\mathrm{n}\) in kpc}
+
+\text{The distance to the galaxy (d) is then:}
+
+\begin{equation}
+d (kpc)= \frac{0.5 D_\mathrm{n}(\mathrm{kpc})}{\tan\left( \frac{D_\mathrm{n}(\mathrm{arcsecs} * (\pi / 648000)}{2} \right)}
+\end{equation}
+
+\begin{equation}
+\approx \frac{D_\mathrm{n}(\mathrm{kpc})}{D_\mathrm{n}(\mathrm{arcsecs} * (\pi / 648000)}
+\end{equation}
+
+
+
+
+\textbf {Rotation Curves}
+
+\textit {Keplerian, e.g. the Solar system planets}
+\begin{equation}
+V \propto \frac {1}{\sqrt{R}}
+\end{equation}
+
+\textit {Solid Body Rotation, e.g. inner part of galaxy rotation curve (a few kPc)}
+\begin{equation}
+V \propto R
+\end{equation}
+
+\textit {Flat Rotation Curve, e.g. extended part of galaxy rotation curve (a few hundred kPc)}
+\begin{equation}
+M(R) \propto R \; \; (\mathrm{breaks \; down \; as \; R \; tends \; to \;} \infty)
+\end{equation}
+\begin{equation}
+V \approx const
+\end{equation}
+\begin{equation}
+\rho(r) = \frac {V^2}{4 \pi G r^2}
+\end{equation}
+
+\textit {NFW (Navarro-Frenk-White, 1997) Density Profile}
+\begin{equation}
+\rho_\mathrm{NFW}(r) = \frac {\rho_\mathrm{0}}{(r/a)(1 + r/a)^2}  
+\end{equation}
+
+\textbf{Lin-Shu Density Waves}
+\begin{equation}
+\Omega_\mathrm{gp} = constant \text{ ('global pattern speed')}
+\end{equation}
+\begin{equation}
+\Omega_\mathrm{m}(R) \propto R^{-1} \text{ (material angular velocity)}
+\end{equation}
+\begin{equation}
+R_\mathrm{c}  \text{ (co-rotation radius) occurs when } \Omega_\mathrm{m}(R) = \Omega_\mathrm{gp}
+\end{equation}
+
+\textbf {Stability Of Material in \textit{Spheres}}
+
+\textit {Jeans Length  (\textbf{spherical} geometry) - sphere collapses under self-gravity if its radius is greater than this value for given density (\(\rho\)) and velocity dispersion (\(\sigma\)) }
+\begin{equation}
+R_\mathrm{J} = \left( \frac{3 \pi \sigma^2}{32 G \rho} \right)^{1/2}
+\end{equation}
+
+\textit{Jeans Mass (\textbf{spherical} geometry)}
+\begin{equation}
+M_\mathrm{J} = \frac{4}{3} \pi R^3_\mathrm{J} \rho
+\end{equation}
+
+
+\textbf {Stability Of Material in Galaxy \textit{Disks}}
+
+\textit {Mass of Galactic Disk}
+\begin{equation}
+M = \pi R^2 \mu 
+\end{equation}
+\begin{center}
+\text{ (\(\mu\) = surface mass density of the disk)}
+\end{center}
+
+\textit {Jeans Length (\textbf{disk} geometry) - disc collapses under self-gravity if its radius is greater than this value for given surface density (\(\mu\)) and velocity dispersion (\(\sigma\)) }
+\begin{equation}
+R_\mathrm{J, D} = \frac {\pi}{8} \frac {\sigma^2}{G \mu}
+\end{equation}
+
+\textit {Jeans Mass (\textbf{disk} geometry)}
+\begin{equation}
+M_\mathrm{J, D} = \pi R^2_\mathrm{J,D} \mu = \frac{\pi^3 \sigma^4}{64 G^2 \mu}
+\end{equation}
+
+\textit {Minimum size of a disk region for rotational stability}
+\begin{equation}
+R_\mathrm{ROT} = \frac {2\pi}{3} \frac {G \mu}{B^2}
+\end{equation}
+\begin{center}
+\text{(B = the second Oort constant)}
+\end{center}
+
+\textit {(Safronov-)Toomre Stability Criterion, rearranging \(R_\mathrm{TOT} \leq R_\mathrm{J, D}\); spiral galaxies sit just on the stable side of this criterion - a spiral density wave locally increases \(\mu\) triggering star formation in a spiral arm}
+\begin{equation}
+\sigma \geq \left( \frac {16}{3} \right) ^{1/2} \frac {G \mu}{B}
+\end{equation}
+
+\textbf {Star Formation Rate Density in Spiral Galaxy Disks and Dwarf Galaxies}
+
+\textit {Original Schmidt Law - Star Formation Rate Density vs \textbf{Volume} Density}
+\begin{equation}
+R_\mathrm{sfr} = a \rho^\mathrm{n}_\mathrm{g} \text{ (n = 1 - 2)}
+\end{equation}
+
+\textit {Modified Schmidt, or Kennicutt-Schmidt, Law - Star Formation Rate Density vs \textbf{Surface} Density}
+\begin{equation}
+\Sigma_\mathrm{sfr} = a' \mu^\mathrm{N}_\mathrm{g} \; \equiv a' \Sigma^\mathrm{N}_\mathrm{gas} \text{ (N = 1 - 2)}
+\end{equation}
+
+\textbf {The Galaxy Luminosity Function}
+
+\text{\(\phi(L)\) = the number of galaxies per unit vol. of Universe, per luminosity interval (\(L\) to \(L + \delta L\))}
+
+\textit {Schechter Function}
+\begin{equation}
+\phi(L) dL = N_\mathrm{0} \left( \frac {L}{L_\star} \right)^\alpha \exp \left( \frac {-L}{L_\star} \right) \frac {dL}{L_\star}
+\end{equation}
+
+\textit {Dwarf Galaxy Schechter Function}
+\begin{equation}
+\phi(L) dL = N_\mathrm{0} \left( \frac {L}{L_\star} \right)^\alpha \frac {dL}{L_\star}
+\end{equation}
+
+
+
+\newpage
+
+\section{Black Holes}
+
+\textit{Mass to Light Ratio at Core of a Galaxy}
+\begin{equation}
+M_\mathrm{c} = \frac{\sigma^2 R_\mathrm{c}}{G}
+\end{equation}
+
+\begin{equation}
+L_\mathrm{c} = \pi R^2_\mathrm{c} I_\mathrm{0}
+\end{equation}
+
+\begin{equation}
+\left(\frac{M}{L} \right)_\mathrm{c} \approx \frac{\sigma^2}{G I_\mathrm{0} R_\mathrm{c}}  \approx \frac{9\sigma^2}{2 \pi G I_\mathrm{0} R_\mathrm{c}}
+\end{equation}
+
+\textit{Radius of Dominance of a Black Hole}
+\begin{equation}
+R_\mathrm{dom} = \frac{G M_\bullet}{V^2_\mathrm{orb}} \approx \frac{G M_\bullet}{\sigma^2}
+\end{equation}
+
+\textit{Accretion Energy for a Neutron Star}
+\begin{equation}
+\Delta E_\mathrm{acc}  = \frac{G M_\mathrm{ns}}{R_\mathrm{ns}} \text{  J kg\(^{-1}\)}
+\end{equation}
+
+\textit {Schwarzschild Radius}
+\begin{equation}
+R_\mathrm{S} = \frac {2 G M_\bullet}{c^2} \approx 3 \left(\frac {M_\bullet}{M_\odot} \right) \mathrm{km}
+\end{equation}
+
+\textit {Eddington Luminosity (maximum luminosity formr an AGN)}
+\begin{equation}
+L_\mathrm{Edd} = \frac {G M_\bullet m_\mathrm{p} 4 \pi c}{\sigma_\mathrm{T}}
+\end{equation}
+
+
+
+
+\newpage
+
+\section{Cosmology}
+
+\textbf {Redshift, z and 'wavelength ratio', 1+z}
+\begin{equation}
+z = \frac {\lambda_\mathrm{ob} - \lambda_\mathrm{em}}{\lambda_\mathrm{em}} \text{ (up to \(z \approx 0.2\))}
+\end{equation}
+\begin{equation}
+z = \frac {a(t_\mathrm{ob})}{a(t_\mathrm{em})} - 1 \text{ (for larger \(z\))}
+\end{equation}
+\begin{equation}
+1 + z = \frac{a(t_\mathrm{ob})}{a(t_\mathrm{em})} = \frac {\lambda_\mathrm{ob}}{\lambda_\mathrm{em}} = \frac {f_\mathrm{em}}{f_\mathrm{ob}}
+\end{equation}
+\begin{equation}
+1 + z  = \frac{\lambda}{\lambda_\mathrm{0}} = \frac {f_\mathrm{0}}{f} = \frac{a_\mathrm{0}}{a(t)} = \frac{1}{a(t)}
+\end{equation}
+
+
+\textbf {Hubble's Law}
+
+\textit {Hubble's Constant Equation - Vector Form}
+\begin{equation}
+\vec{v} = H_0 \vec{r}
+\end{equation}
+
+\textit {Hubble's Constant Equation - Scalar Form (v and r are subscripted to emphasise \textbf{proper} velocity and \textbf{proper} distance between two fundamental observers or their galaxies)}
+\begin{equation}
+v_\mathrm{p} = H(t) r_\mathrm{p}
+\end{equation}
+
+\textit {Hubble Time - the upper limit to the age of a matter-less Universe (the gravitational effect of the mass slows down expansion)}
+\begin{equation}
+t_\mathrm{H} = \frac {d}{v} = H_\mathrm{0}^{-1} = \frac {1}{H_\mathrm{0}}
+\end{equation}
+\begin{equation}
+1 \; \mathrm{Mpc} = 3.08 \times 10^{19} \; \mathrm{km}
+\end{equation}
+\begin{equation}
+H_\mathrm{0} = 72 \; \mathrm{km} \;  \mathrm{s^{-1}} \; \mathrm{Mpc^{-1}} \; \times 1 \; \mathrm{Mpc} \times (3.08 \times 10^{19} \; \mathrm{km})^{-1} = 2.34 \times 10^{18} \; \mathrm{s^{-1}}
+\end{equation}
+
+
+\textit {Hubble Parameter}
+\begin{equation}
+H(t) \equiv \frac {\dot{a}(t)}{a(t)} \equiv \frac {\dot{R}(t)}{R(t)} \equiv \frac {1}{a} \frac {da}{dt} \; \; (a \; \mathrm{and} \; R = \mathrm{'scale \; factor'})
+\end{equation}
+
+\textit {Hubble's Constant Parameterisation - h, the reduced Hubble constant}
+\begin{equation}
+h \equiv \frac {H_\mathrm{0}}{\mathrm{100 \; km \; s^{-1} \; Mpc^{-1}}}
+\end{equation}
+\begin{equation}
+h \approx 0.70 \; \pm \; \mathrm{a \; few \; percent}
+\end{equation}
+
+\textit {Hubble's Law}
+\begin{equation}
+d \approx \frac {c}{H_\mathrm{0}}z \; \; \mathrm{or} \;z \approx \frac {H_\mathrm{0}}{c} d \; \; (z \leq {0.2})
+\end{equation}
+
+\begin{equation}
+d \approx \frac {cz}{H_\mathrm{0}} \left[ 1 + \frac {1}{2} (1 - q_\mathrm{0})z \right]
+\end{equation}
+
+\begin{equation}
+d = \frac{c}{H_\mathrm{0}} \int_{0}^{z} \frac{dz'}{\sqrt{\Omega_\mathrm{m} (1 + z')^3 + \Omega_\mathrm{\Lambda} + (1 - \Omega_\mathrm{m} - \Omega_\mathrm{\Lambda}) (1 + z')^2}} \,dz 
+\end{equation}
+
+\textbf {Comoving Expansion}
+
+\text{\(s =\) proper distance (\(\equiv S\), \(\sigma\), \(d_\mathrm{p}\), or \(r_\mathrm{p}\)); \(x =\) co-moving distance; \(a(t)=\) the scale factor}
+
+\textit {for the Hubble Flow only, then x is independent of t}
+\begin{equation}
+\vec{s}(t) = a(t) \vec{x}
+\end{equation}
+
+\textit{differentiating, we get proper velocity}
+\begin{equation}
+v = \frac{ds}{dt} = x \frac{da}{dt} = \frac{s}{a} \frac{da}{dt} = \frac{\dot{a}}{a}s
+\end{equation}
+\begin{equation}
+v = \dot{s} = x \dot{a} = \frac{s}{a} \dot{a} = \frac{\dot{a}}{a}s
+\end{equation}
+\begin{equation}
+\frac{\dot{a}}{a} = H_\mathrm{0}
+\end{equation}
+
+\textit {for \textbf{peculiar} motion as well (x is dependent on t)}
+\begin{equation}
+\vec{s}(t) = a(t) \vec{x}(t)
+\end{equation}
+
+\textit{differentiating, we get proper velocity (ds/dt) \textbf{and} peculiar velocity (dx/dt)}
+\begin{equation}
+\frac {ds}{dt} = a \frac {dx}{dt} + x \frac {da}{dt}
+\end{equation}
+
+\textbf {Scale factor at the time the object originally emitted that light}
+\begin{equation}
+a(t_\mathrm{em}) = \frac {1}{1 + z(t)}
+\end{equation}
+
+\textbf {Friedmann Equation or Energy Equation - governs time evolution of \(a(t)\) and the Hubble parameter}
+\begin{equation}
+\left[H(t)\right]^2  \equiv  H^2(t)  \equiv \left(\frac {1}{a} \frac {da}{dt}\right)^2 \equiv \left(\frac {\dot{a}}{a}\right)^2 = \frac {8 \pi G}{3} \rho_\mathrm{(mat+rad)} - \frac {k c^2}{a^2} + \frac {\Lambda c^2}{3}
+\end{equation}
+\begin{equation}
+k c^2 = - \frac {2U}{m x^2}  
+\end{equation}
+
+\begin{equation}
+\left(\frac {\dot{a}}{a}\right)^2 = \frac {8 \pi G}{3} \left[ \rho_\mathrm{m,0} \left( \frac {a_\mathrm{0}}{a(t)} \right)^3 + \rho_\mathrm{r,0} \left(\frac {a_\mathrm{0}}{a(t)} \right)^4 + \rho_\mathrm{\Lambda} \right] - \frac {kc^2}{a^2}
+\end{equation}
+
+\textbf {The Acceleration Equation, or second Friedmann Equation}
+\begin{equation}
+\frac {1}{a} \frac {d^2a}{dt^2}\equiv \frac {\ddot{a}}{a} = - \frac {4 \pi G}{3} \left(\rho + \frac {3p}{c^2}\right) + \frac {\Lambda c^2}{3}
+\end{equation}
+
+\begin{equation}
+\frac {\ddot{a}}{a} = - \frac {4 \pi G}{3} \left[ \rho_\mathrm{m,0} \left( \frac {a_\mathrm{0}}{a(t)} \right)^3 + 2\rho_\mathrm{r,0} \left(\frac {a_\mathrm{0}}{a(t)} \right)^4 -2\rho_\mathrm{\Lambda} \right]
+\end{equation}
+
+\textbf {Fluid Equation - governs time evolution of \(\rho(t)\)}
+\textit {from differentiating the energy equation w.r.t. time, then eliminating the second derivative using the acceleration equation}
+\begin{equation}
+\dot{\rho} +3 \left(\frac {\dot{a}}{a}\right) \left(\rho + \frac {p}{c^2}\right) = 0
+\end{equation}
+\begin{equation}
+\rho_{\mathrm{mat}} \propto \frac {1}{a^3} ; \; \; \rho_{\mathrm{rad}} \propto \frac {1}{a^4}
+\end{equation}
+\begin{equation}
+\rho =  \rho_{\mathrm{rad}} + \rho_{\mathrm{mat}} 
+\end{equation}
+
+\textbf {Curvature (k = curvature parameter)}
+\begin{equation}
+Curvature = \frac {k}{a^2(t)}
+\end{equation}
+
+\textbf {The Deceleration Parameter}
+\begin{equation}
+q(t) = - \frac {a(t)}{\dot{a}^2(t)} \ddot{a}(t) = - \frac {\ddot{a}(t)}{a(t) H^2(t)} = \frac {\Omega_\mathrm{m}(t)}{2} - \Omega_\mathrm{\Lambda}(t)
+\end{equation}
+
+\textbf {Cosmologists set...}
+\begin{equation}
+c = 1
+\end{equation}
+
+\textbf {Density and Pressure of Three Ideal Fluids - Matter, Radiation and Dark Energy. N.B. no time-dependence for dark energy}
+\begin{equation}
+\rho(t) = \rho_\mathrm{m}(t) +  \rho_\mathrm{r}(t) + \rho_\mathrm{\Lambda}
+\end{equation}
+\begin{equation}
+p(t) = p_\mathrm{m}(t) + p_\mathrm{r}(t) + p_\mathrm{\Lambda}
+\end{equation}
+
+\textit {Energy Densities}
+\begin{equation}
+\rho_m c^2 \mathrm{,} \; \rho_r c^2 \; \mathrm{and} \; \rho_\mathrm{\Lambda} c^2
+\end{equation}
+
+\textit {Pressures / Cosmological Equations of State}
+\begin{equation}
+p_\mathrm{r} = w \rho_\mathrm{r} c^2 = \frac {\rho_\mathrm{r} c^2}{3}
+\end{equation}
+
+\begin{equation}
+p_\mathrm{m} = w \rho c^2 \; = 0, \; for \; 'dust'
+\end{equation}
+
+\begin{equation}
+p_\mathrm{\Lambda} = w \rho_\mathrm{\Lambda}c^2 = - \frac {\Lambda c^4}{8 \pi G}
+\end{equation}
+
+\begin{equation}
+w \equiv \frac {p}{\rho}
+\end{equation}
+
+\begin{equation}
+w = 0 \; for \; 'dust', \; \frac {1}{3} \; for \; radiation, \; and \; -1 \; for \; dark ; energy
+\end{equation}
+
+\textit {Universe with pressure-free dust:}
+
+\begin{equation}
+\rho(t) = \rho_\mathrm{m,0} \left( \frac {a_\mathrm{0}}{a(t)} \right)^3 + \rho_\mathrm{r,0} \left( \frac {a_\mathrm{0}}{a(t)} \right)^4 + \rho_\mathrm{\Lambda}
+\end{equation}
+
+\begin{equation}
+p(t) = \frac {\rho_\mathrm{r,0} \; c^2}{3} \left( \frac {a_\mathrm{0}}{a(t)} \right)^4 - \rho_\mathrm{\Lambda} c^2
+\end{equation}
+
+\textbf {Solving the Friedmann Equation for k = 0}
+
+\textit {Radiation-Dominated}
+\begin{equation}
+a(t) \propto t^{1/2} ; \; \rho_{\mathrm{rad}} \propto \frac {1}{t^2} ; \; \rho_{\mathrm{mat}} \propto \frac {1}{a^3} \propto \frac {1}{t^{3/2}}
+\end{equation}
+\textit {Matter-Dominated}
+\begin{equation}
+a(t) \propto t^{2/3} ; \; \rho_{\mathrm{mat}} \propto \frac {1}{t^2} ; \; \rho_{\mathrm{rad}} \propto \frac {1}{a^4} \propto \frac {1}{t^{8/3}}
+\end{equation}
+\textit {Dark-Energy-Dominated (after 9 Gyr)}
+\begin{equation}
+a(t) \propto \exp{(H_\mathrm{0}t)}
+\end{equation}
+
+
+\textbf {Critical Density (\( k = 0, \Lambda = 0 \))}
+\begin{equation}
+\rho_\mathrm{c}(t) = \frac {{3[H(t)]^2}}{8 \pi G}
+\end{equation}
+\text{critical density sits on border between inifinite expansion and re-collapse of Universe}
+
+\textbf {Density Parameters}
+
+\textit {Density Parameter - for matter}
+\begin{equation}
+\Omega = \frac {\rho}{\rho_\mathrm{c}}
+\end{equation}
+
+\textit {Density Parameter - General Form}
+\begin{equation}
+\Omega_\mathrm{x}(t) \equiv \frac {\rho_\mathrm{x}(t)}{\rho_\mathrm{c}(t)} = \frac {8 \pi G \rho_x}{3H^2}
+\end{equation}
+
+\begin{equation}
+\Omega_\mathrm{m}(t) \equiv \frac {\rho_\mathrm{m}(t)}{\rho_\mathrm{c}(t)}; \; \; \Omega_\mathrm{r}(t) \equiv \frac {\rho_\mathrm{r}(t)}{\rho_\mathrm{c}(t)}; \; \; \Omega_\mathrm{\Lambda}(t) \equiv \frac {\rho_\mathrm{\Lambda}}{\rho_\mathrm{c}(t)}
+\end{equation}
+\begin{center}
+\text{\(\rho_\mathrm{\Lambda}\) is NOT time-dependent}
+\end{center}
+
+\textit {Density Parameter for Dark Energy}
+\begin{equation}
+\Omega_\Lambda(t) = \frac {\rho_\Lambda}{\rho_\mathrm{c}(t)} \; \mathrm{where} \; \rho_\Lambda = \frac {\Lambda c^2}{8 \pi G} 
+\end{equation}
+
+
+\textit {Density Parameters Combined - Radiation, Matter, Curvature and Vacuum Density/Cosmological Constant}
+\begin{equation}
+H^2(a) \equiv \left( \frac {\dot{a}}{a} \right)^2 = H^2_\mathrm{0} \left[ \frac {\Omega_\mathrm{0,r}}{a^4} + \frac {\Omega_\mathrm{0,m}}{a^3} + \frac {\Omega_\mathrm{0,k}}{a^2} + \frac {\Omega_\mathrm{0,\Lambda}}{a^{3(1+w)}} \right]
+\end{equation}
+
+\begin{equation}
+\Omega_\mathrm{0,k} = 1 - \Omega_0
+\end{equation}
+
+\textit{Universes}
+\begin{equation}
+\Omega_\mathrm{m}(t) + \Omega_\mathrm{r}(t) + \Omega_\mathrm{\Lambda}(t) - 1 = \frac {k c^2}{a^2(t) H^2(t)}
+\end{equation}
+
+\begin{equation}
+\Omega_\mathrm{m} + \Omega_{\Lambda} = 1 \; (\mathrm{for \; a \; flat \; universe})
+\end{equation}
+\begin{center}
+\text{the Theory of Inflation suggests it must = 1}
+\end{center}
+
+\textbf{Modified Hot Big Bang Model}
+
+\textit{Matter Energy Density}
+\begin{equation}
+\propto (1+z)^3
+\end{equation}
+\textit{Photon Energy Density, including the CMB}
+\begin{equation}
+\propto (1+z)^4
+\end{equation}
+\begin{equation}
+E_\mathrm{photon} \propto \lambda^{-1}
+\end{equation}
+
+\textit{Cosmic Microwave Background (CMB)}
+\begin{equation}
+T_\mathrm{CMB} \propto (1+z)
+\end{equation}
+
+
+\textbf {Relativistic Cosmology}
+
+\textit {Einstein Field Equations}
+\begin{equation}
+R_{\mu \nu} - \frac {1}{2} R g_{\mu \nu} +\Lambda g_{\mu \nu} = \frac {8 \pi G}{c^4} T_{\mu \nu}
+\end{equation}
+
+\textit {The Robertson-Walker Metric}
+\begin{equation}
+(ds)^2 = c^2 (dt)^2 - a^2(t) \left[ \frac {(dr)^2}{1-kr^2} + r^2(d\theta)^2 +r^2 \sin^2(\theta) (d\phi)^2 \right]
+\end{equation}
+
+\textit {The Minkowski (Flat Space) Metric (\(\eta\)) in Spherical Coordinates; the Robertson-Walker Metric reduces to this when k = 0, a(t) = constant}
+\begin{equation}
+(ds)^2 = c^2 (dt)^2 - (dr)^2 - r^2(d\theta)^2  - r^2 \sin^2(\theta) (d\phi)^2
+\end{equation}
+\begin{center}
+\text{Alternatively, and with metric signature -,+++}
+\end{center}
+\begin{equation}
+ds^2 = - c^2 dt^2 + dr^2 +r^2 d\Omega^2
+\end{equation}
+\begin{equation}
+d\Omega^2 = d\theta^2 + \sin^2\theta d\phi^2 
+\end{equation}
+
+\newpage
+
+\section {Sources}
+LJMU course notes.
+
+Fellow LJMU student equation lists made available on the forums. 
+
+The 'Big Orange Book'.
+
+Open University books (e.g Transiting Exoplanets) and Equation Lists, from S207, S282, S382, MS221 and MST210.
+
+Various websites, frequently including Wikipedia.
+
+
+%to display equations in the middle of a sentence, use the following:
+% \( E=mc^2 \).  NB the round brackets, instead of square
+% to display non-numbered equations, use the following 3 lines for each equation
+%\[
+%E=mc^2
+%\]
+
+
+\end{document}
+
+
+
+
+
+  

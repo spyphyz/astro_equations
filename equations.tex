@@ -1,34 +1,12 @@
-\documentclass{article}
-%sets paragraph indent for whole document
-\setlength{\parindent}{0pt}
-%gap between paragraphs
-\setlength{\parskip}{1em}
-%line spacing (1.3 is equivalent to one and a half spacing)
-\renewcommand{\baselinestretch}{1.3}
-\usepackage[english]{babel}
-
-% Set page size and margins
-% Replace `letterpaper' with`a4paper' for UK/EU standard size
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-
-% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-\usepackage[utf8]{inputenc}
-
-\author{Dr Simon P.~Young \thanks{MSc Student, LJMU, UK}}
-\title {Astrophysics Equations}
+\documentclass{spy}
+\course{General Astrophysics}
+\topic{Equations}
 
 
 \begin{document}
-% generate the title
-\maketitle
-
 
 \begin{abstract}
 This collection of formulae has been collated for use in the MSc Astrophysics end-of-chapter tests and examinations. The author takes no responsibilities for mistakes! Where possible, equations are checked for accuracy using more than one source. Some will be approximations, and this will be highlighted where practicable. 
-
 \end{abstract}
 
 \tableofcontents
@@ -727,6 +705,9 @@ v = \sqrt {\frac {GM} {R}}
 \end{equation}
 
 \textit{1-D Angle Subtended Far Away, e.g. Galaxy - calculator set to radians}
+\begin{equation}
+r = d \tan(\theta)
+\end{equation}
 \begin{equation}
 \theta/\mathrm{rad} = \arctan \frac {Radius} {Distance}
 \end{equation}
